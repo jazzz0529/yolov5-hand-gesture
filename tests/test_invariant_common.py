@@ -1,20 +1,21 @@
-import pytest
-import sys
 import os
+import sys
+
+import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from models.common import _request_ssrf_url, _validate_ssrf_url
 
 BLOCKED_URLS = [
-    "http://169.254.169.254/latest/meta-data/",   # AWS metadata / link-local
-    "http://192.168.1.1/admin",                    # RFC1918 private
-    "http://127.0.0.1/internal",                   # Loopback by IP
-    "http://localhost/internal",                   # Loopback by name
+    "http://169.254.169.254/latest/meta-data/",  # AWS metadata / link-local
+    "http://192.168.1.1/admin",  # RFC1918 private
+    "http://127.0.0.1/internal",  # Loopback by IP
+    "http://localhost/internal",  # Loopback by name
 ]
 
 ALLOWED_URLS = [
-    "https://ultralytics.com/images/zidane.jpg",   # Valid public URL
+    "https://ultralytics.com/images/zidane.jpg",  # Valid public URL
 ]
 
 
