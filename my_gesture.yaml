@@ -13,4 +13,4 @@ test: images/test
 nc: 5
 
 # 类别名称
-names: ['ok', 'thumbs_up', 'open_palm', 'fist', 'victory']
+names: ["ok", "thumbs_up", "open_palm", "fist", "victory"]

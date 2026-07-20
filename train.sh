@@ -21,13 +21,13 @@ echo "开始实验一：yolov5s (轻量快速模型)"
 echo "Batch size = 32"
 echo "=========================================="
 python train.py \
-    --img $IMG_SIZE \
-    --batch 32 \
-    --epochs $EPOCHS \
-    --data $DATA_CONFIG \
-    --weights yolov5s.pt \
-    --device $DEVICE \
-    --cache
+  --img $IMG_SIZE \
+  --batch 32 \
+  --epochs $EPOCHS \
+  --data $DATA_CONFIG \
+  --weights yolov5s.pt \
+  --device $DEVICE \
+  --cache
 
 echo "=========================================="
 echo "实验一完成！"
@@ -38,13 +38,13 @@ echo "开始实验二：yolov5m (更深、精度更高)"
 echo "Batch size = 24 (适配12G显存)"
 echo "=========================================="
 python train.py \
-    --img $IMG_SIZE \
-    --batch 24 \
-    --epochs $EPOCHS \
-    --data $DATA_CONFIG \
-    --weights yolov5m.pt \
-    --device $DEVICE \
-    --cache
+  --img $IMG_SIZE \
+  --batch 24 \
+  --epochs $EPOCHS \
+  --data $DATA_CONFIG \
+  --weights yolov5m.pt \
+  --device $DEVICE \
+  --cache
 
 echo "=========================================="
 echo "所有实验已完成！结果保存在 runs/train/ 目录下"
